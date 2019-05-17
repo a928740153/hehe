@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ab29c6f3-4de6-4e5f-9c0e-0ba3bd3dca97}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>face_reco_from_camera.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="age\model\birth.mobilenet.07-0.81.model" />
+    <Content Include="age\__pycache__\birth_predict.cpython-36.pyc" />
+    <Content Include="age\__pycache__\mobilenet.cpython-36.pyc" />
+    <Content Include="age\__pycache__\network.cpython-36.pyc" />
+    <Content Include="introduction\face_reco_single_person.png" />
+    <Content Include="introduction\face_reco_single_person_customize_name.png" />
+    <Content Include="introduction\face_reco_two_people.png" />
+    <Content Include="introduction\face_reco_two_people_in_database.png" />
+    <Content Include="introduction\get_face_from_camera.png" />
+    <Content Include="introduction\get_face_from_camera_out_of_range.png" />
+    <Content Include="introduction\overview.png" />
+    <Content Include="requirements.txt" />
+    <Content Include="utils\__pycache__\datasets.cpython-36.pyc" />
+    <Content Include="utils\__pycache__\grad_cam.cpython-36.pyc" />
+    <Content Include="utils\__pycache__\inference.cpython-36.pyc" />
+    <Content Include="utils\__pycache__\preprocessor.cpython-36.pyc" />
+    <Content Include="utils\__pycache__\__init__.cpython-36.pyc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="age\birth_predict.py" />
+    <Compile Include="age\mobilenet.py" />
+    <Compile Include="age\network.py" />
+    <Compile Include="face_reco_from_camera.py" />
+    <Compile Include="features_extraction_to_csv.py" />
+    <Compile Include="get_faces_from_camera.py" />
+    <Compile Include="how_to_use_camera.py" />
+    <Compile Include="utils\datasets.py" />
+    <Compile Include="utils\data_augmentation.py" />
+    <Compile Include="utils\grad_cam.py" />
+    <Compile Include="utils\inference.py" />
+    <Compile Include="utils\preprocessor.py" />
+    <Compile Include="utils\visualizer.py" />
+    <Compile Include="utils\__init__.py" />
+    <Compile Include="video_emotion_color_demo.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="age\" />
+    <Folder Include="age\model\" />
+    <Folder Include="age\__pycache__\" />
+    <Folder Include="introduction" />
+    <Folder Include="utils\" />
+    <Folder Include="utils\__pycache__\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
